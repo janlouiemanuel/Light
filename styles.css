@@ -1,0 +1,91 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    min-height: 100vh;
+    
+}
+#light
+{
+    width: 900px;
+    height: 30px;
+    background: white;
+    border-radius: 100px;
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,black);
+}
+#light::before
+{
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    inset: 0;
+    background: linear-gradient(90deg, pink,cyan,yellow,lightgreen, pink,cyan,yellow,lightgreen, pink);
+    background-size: 200%;
+    left: 0;
+    top: 0;
+    
+}
+#light::after
+{
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    inset: 0;
+    background: linear-gradient(90deg, pink,cyan,yellow,lightgreen, pink,cyan,yellow,lightgreen, pink);
+    background-size: 200%;
+    left: 0;
+    top: 0;
+    filter: blur(20px);
+    animation: light 5s linear infinite;
+}
+@keyframes light
+{
+        0%
+    {
+        background-position: 0 0;
+    }
+    0%
+    {
+        background-position: 200% 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
